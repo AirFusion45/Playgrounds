@@ -1,0 +1,22 @@
+{
+  "name": "electron-playground",
+  "version": "0.0.1",
+  "description": "airfusion's electron playground - not designed to be published",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^3.0.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "keywords": [
+    "test",
+    "playground",
+    "no",
+    "publish"
+  ],
+  "author": "airfusion",
+  "license": "MIT"
+}
