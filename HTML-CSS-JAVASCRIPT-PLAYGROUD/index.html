@@ -1,17 +1,109 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <title>Testing</title>
-    <!-- <h1>Heading h1 in head header</h1> -->
-  </head>
-  <body>
-    <h1>Heading h1</h1>
-    <h2>Heading h2</h2>
-    <h3>Heading h3</h3>
-    <h4>Heading h4</h4>
-    <h5>Heading h5</h5>
-    <h6>Heading h6</h6>
-    <p>Paragraph one compared to headings. Headings are bolded, Paragraphs are not.</p>
-    <p>There is a margin. Paragraph one compared to headings. Headings are bolded, Paragraphs are not.</p>
+
+<head>
+  <title>Testing</title>
+  <!-- <h1>Heading h1 in head header</h1> -->
+</head>
+
+<body>
+  <h1>Heading h1</h1>
+  <h2>Heading h2</h2>
+  <h3>Heading h3</h3>
+  <h4>Heading h4</h4>
+  <h5>Heading h5</h5>
+  <h6>Heading h6</h6>
+  <p>Paragraph one <strong>compared</strong> to headings. Headings are bolded, Paragraphs are not.</p>
+  <!-- Strong is usually bolded, but can be edited in CSS, generally to specify making a piece of txt standout. -->
+  <p>There is a margin. Paragraph one compared to headings. <em>Headings</em> are bolded, Paragraphs are not.</p>
+  <!-- em is usually italicized, but can be edited in CSS. Means to empasize. -->
+  <p>This is <a href="https://google.com" target="_blank">another paragraph</a></p>
+  <!-- str in href can be local like main.html or external site. The _blank in target makes the pg open in another tab. Targets do apply in electron.-->
+  <!-- href provided/allowed input a link-->
+
+  <!-- Lists-->
+  <ul>
+    <!-- Unordered list, bulleted list - Auto indented/padded - Generally used for nav bars on websites, but changed style in CSS-->
+    <li>List 1</li>
+    <li>List 1</li>
+    <li>List 1</li>
+    <li>List 1</li>
+  </ul>
+  <ol>
+    <!-- Ordered list, numbered list - Auto indented /padded-->
+    <li>List 1</li>
+    <li>List 1</li>
+    <li>List 1</li>
+    <li>List 1</li>
+  </ol>
+
+  <br> <!-- line break-->
+  <hr> <!-- Horizontal rule, gives us line-->
+  <!-- Forms -->
+  <form action="process.php" method="POST">
+    <!-- action sends/submits  it to a page for processing... and post means its adding to a db-->
+    <div>
+      <label>Firstname: </label>
+      <input type="text" name="firstName">
+      <!-- name is used to grab it (this input) in php or js lateron. getelementbyname-->
+    </div>
+    <br>
+    <div>
+      <label>Lastname: </label>
+      <input type="text" name="lastName">
+      <!-- name is used to grab it (this input) in php or js lateron. getelementbyname-->
+    </div>
+    <br>
+    <div>
+      <label>Text</label>
+      <textarea name="textBox"></textarea>
+    </div>
+    <br>
+    <div>
+      <label>gender</label>
+      <select name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <br>
+
+    <div>
+      <label>Date</label>
+      <input type="date" name="date" id="date111" value=""> <!-- Use value to place value in text box-->
+      <script>
+        var date = new Date();
+
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
+
+        if (month < 10) month = "0" + month;
+        if (day < 10) day = "0" + day;
+
+        var today = year + "-" + month + "-" + day;
+
+
+        document.getElementById('date111').value = today;
+      </script>
+    </div>
+
+    <br>
+    <div>
+      <label>Age</label>
+      <input type="number" name="age" placeholder="1">
+      <!-- use placeholder to make text disappear when user clicks on the txt box-->
+    </div>
+    <br>
+    <div>
+      <input type="submit" name="submit" value="Submit"> <!-- submit button linked to the form (ln44)-->
+    </div>
+  </form>
+
+  <button>HI CLICK ME</button> <!-- does not do anything unless it is hooked up to a method. using click-->
+<a href="Sample.jpg">
+  <img src="Sample.jpg" alt="IMG NOT FOUND"> <!--resize using css-->
+</a>
 </html>
