@@ -1,109 +1,58 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-  <title>Testing</title>
-  <!-- <h1>Heading h1 in head header</h1> -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <!-- <style type="text/css"> 
+        h1 {
+            color:blue;
+        }
+    </style> -->
 </head>
-
 <body>
-  <h1>Heading h1</h1>
-  <h2>Heading h2</h2>
-  <h3>Heading h3</h3>
-  <h4>Heading h4</h4>
-  <h5>Heading h5</h5>
-  <h6>Heading h6</h6>
-  <p>Paragraph one <strong>compared</strong> to headings. Headings are bolded, Paragraphs are not.</p>
-  <!-- Strong is usually bolded, but can be edited in CSS, generally to specify making a piece of txt standout. -->
-  <p>There is a margin. Paragraph one compared to headings. <em>Headings</em> are bolded, Paragraphs are not.</p>
-  <!-- em is usually italicized, but can be edited in CSS. Means to empasize. -->
-  <p>This is <a href="https://google.com" target="_blank">another paragraph</a></p>
-  <!-- str in href can be local like main.html or external site. The _blank in target makes the pg open in another tab. Targets do apply in electron.-->
-  <!-- href provided/allowed input a link-->
-
-  <!-- Lists-->
-  <ul>
-    <!-- Unordered list, bulleted list - Auto indented/padded - Generally used for nav bars on websites, but changed style in CSS-->
-    <li>List 1</li>
-    <li>List 1</li>
-    <li>List 1</li>
-    <li>List 1</li>
-  </ul>
-  <ol>
-    <!-- Ordered list, numbered list - Auto indented /padded-->
-    <li>List 1</li>
-    <li>List 1</li>
-    <li>List 1</li>
-    <li>List 1</li>
-  </ol>
-
-  <br> <!-- line break-->
-  <hr> <!-- Horizontal rule, gives us line-->
-  <!-- Forms -->
-  <form action="process.php" method="POST">
-    <!-- action sends/submits  it to a page for processing... and post means its adding to a db-->
-    <div>
-      <label>Firstname: </label>
-      <input type="text" name="firstName">
-      <!-- name is used to grab it (this input) in php or js lateron. getelementbyname-->
+    <div class="container">
+        <!-- <h1 style="color:red">Hello World</h1> Inline CSS BAD! -->
+        <div class="box-1"> <!-- DO NOT REPEAT IDS-->
+            <h1>Hello World</h1>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quo iste, natus laboriosam recusandae corrupti sit ullam nobis. Impedit repudiandae ipsum omnis animi veritatis esse quos tenetur dicta quaerat quibusdam!</p>
+        </div>  
+        <div class="box-2">
+            <h1>Nothing World testing</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio odit deserunt voluptates quibusdam, mollitia placeat pariatur non inventore deleniti consequatur dignissimos, quidem, tempore quam commodi laudantium facilis est temporibus sed.</p>
+        </div>  
+        <div class="unorderedList">
+            <h1>Lists/Bullets</h1>
+            <ul>
+                <li><a href="#">bullet 1</a></li> <!-- # in href in a (hyperlink) tags say they go no where.-->
+                <li><a href="#">bullet 2</a></li>
+                <li><a href="#">bullet 3</a></li>
+                <li><a href="#">bullet 4</a></li>
+                <li><a href="#">bullet 5</a></li>
+                <li><a href="#">bullet 6</a></li>
+            </ul>
+        </div>
+        <div>
+            <form class="form">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="text" name="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="msg">Message: </label>
+                    <textarea name="message" id="msg"></textarea>
+                </div>
+                <input type="button" type="submit" value="Submit">
+            </form>
+        </div>
     </div>
-    <br>
-    <div>
-      <label>Lastname: </label>
-      <input type="text" name="lastName">
-      <!-- name is used to grab it (this input) in php or js lateron. getelementbyname-->
-    </div>
-    <br>
-    <div>
-      <label>Text</label>
-      <textarea name="textBox"></textarea>
-    </div>
-    <br>
-    <div>
-      <label>gender</label>
-      <select name="gender">
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Other</option>
-      </select>
-    </div>
-    <br>
-
-    <div>
-      <label>Date</label>
-      <input type="date" name="date" id="date111" value=""> <!-- Use value to place value in text box-->
-      <script>
-        var date = new Date();
-
-        var day = date.getDate();
-        var month = date.getMonth() + 1;
-        var year = date.getFullYear();
-
-        if (month < 10) month = "0" + month;
-        if (day < 10) day = "0" + day;
-
-        var today = year + "-" + month + "-" + day;
-
-
-        document.getElementById('date111').value = today;
-      </script>
-    </div>
-
-    <br>
-    <div>
-      <label>Age</label>
-      <input type="number" name="age" placeholder="1">
-      <!-- use placeholder to make text disappear when user clicks on the txt box-->
-    </div>
-    <br>
-    <div>
-      <input type="submit" name="submit" value="Submit"> <!-- submit button linked to the form (ln44)-->
-    </div>
-  </form>
-
-  <button>HI CLICK ME</button> <!-- does not do anything unless it is hooked up to a method. using click-->
-<a href="Sample.jpg">
-  <img src="Sample.jpg" alt="IMG NOT FOUND"> <!--resize using css-->
-</a>
+    <div style="margin-top: 500px"></div>
+</body>
 </html>

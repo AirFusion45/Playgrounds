@@ -1,0 +1,130 @@
+* { /* everything */
+margin:0;
+padding:0;
+}
+body {
+    background: #f4f4f4;
+    color:black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    /* OR */
+    /* font: normal 18px Arial, Helvetica, sans-serif;
+    line-height: 1.6em;
+    margin: 0%; */
+}
+a {
+    text-decoration: none;
+    color: black;
+    
+}
+
+a:hover {
+    color: royalblue;
+}
+
+a:active {
+    color: red;
+}
+
+a:visited {
+    color: lightcoral; 
+}
+/* h1 { /* if you dont specify which h1, it is all h1s */
+    /* color: white; */
+/*}  */
+.box-1 {
+    background-color: #333333;
+    color: #ffffff;
+
+    border-right: 5px red solid;
+    border-left: 5px red solid;
+    border-top: 5px red solid;
+    border-bottom: 5px red solid;
+    /* OR */
+    border-width: 3px;
+
+    border-bottom-width: 10px;
+    border-top-style: dashed;
+
+    border: 5px red solid;
+
+
+
+    padding-top: 20px; /* h1 by default has padding */
+    padding-bottom: 20px; /* h1 by default has padding */
+    padding-left: 20px; /* h1 by default has padding */
+    padding-right: 20px; /* h1 by default has padding */
+    /* OR */
+    padding: 20px;
+
+    margin-top: 20px;
+}
+
+.container {
+    width: 80%; /* try to use percents */
+    margin: auto;
+}
+
+.box-1 h1 { /* target only h1s in box-1 */
+   
+    font-weight: 800;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    word-spacing: 1em;
+}
+
+.box-2 {
+    padding: 2%;
+    border: dotted gray;
+    color: rgb(41, 37, 37);
+    margin-top: 5%;
+    
+}
+
+
+.unorderedList {
+    margin-top: 5%;
+    border: black 1px solid;
+    padding: 5px 25px;
+    border-radius: 15px; /* rounded corners */
+
+}
+.unorderedList h1 {
+    text-align: center;
+}
+.unorderedList ul {
+    list-style-type: square;
+}
+.unorderedList li {
+    padding-bottom: 8px;
+    border-bottom: dashed green;
+    list-style-image: url('../imgs/checkmark.png')
+}
+.form {
+    padding: 20px;
+}
+
+.form .form-group {
+    padding-bottom: 15px;
+}
+
+.form .form-group label {
+display: block;
+}
+
+.form input[type="text"], .form textarea {
+    padding: 10px;
+    width: 100%;
+}
+
+.form input[type="buttom"] {
+    background-color: black;
+    color: white;
+   
+
+    padding: 10px 15px;
+    border: none;
+}
