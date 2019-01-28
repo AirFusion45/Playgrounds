@@ -63,7 +63,7 @@ a:visited {
 
 .container {
     width: 80%; /* try to use percents */
-    margin: auto;
+    margin: 0% 10%;
 }
 
 .box-1 h1 { /* target only h1s in box-1 */
@@ -112,7 +112,7 @@ a:visited {
 }
 
 .form .form-group label {
-display: block;
+    display: block;
 }
 
 .form input[type="text"], .form textarea {
@@ -120,11 +120,107 @@ display: block;
     width: 100%;
 }
 
-.form input[type="buttom"] {
+.button {
     background-color: black;
     color: white;
    
 
     padding: 10px 15px;
     border: none;
+}
+
+.button:hover {
+    background: cornflowerblue;
+}
+
+#blogButton {
+    padding: 10px 15px; /* resize */
+    border:2px red solid; /* flavoring around object */
+    margin-left: 18px; /* move to left right more or up or down | To move object without leaving a mark */
+}
+
+.block {
+    float: left;
+    width: 33.3%;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.clr {
+  clear: both;
+}
+
+#mainBlock {
+    float: right;
+    width: 55%;
+   margin-right: 7%;
+   padding: 10px;
+    word-wrap: break-word;
+}
+
+#sideBar {
+    float: left;
+    width: 26.7%;
+    margin-left: 10%;
+    padding: 15px;
+    border-right: 1px solid #cccccc;
+    box-sizing: border-box;
+    background-color: #333333;
+    color: white;
+    
+}
+
+.blockSidebarN {
+    margin-left: 10%;
+    
+}
+
+.pBox {
+    margin-top: 3%;
+    width: 800px; /* size of the actual object, not like margin, where it is positioning, and does not change actual size of object */
+    height: 500px;
+    border: 1px black solid; 
+    position: relative;
+    background-image: url(../imgs/stuff.jpg);
+    background-position: 100px 200px; /* moves background image to this location */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.pBox h1 { /* only target h1 in pBox div */
+    /* position: absolute; /* goes 40 px from the top of the doc, since there is no other refrence to go down by 40 px by */
+    /*   top: 40px; */
+    position: absolute; /* relative & absolute values are paired */
+    top: 40px; /* goes from top 40px */
+    left: 200px /* goes from left 200 px */
+
+}
+
+.pBox h2{
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+}
+
+
+.fix-me {
+    position: fixed;
+    bottom: 10px;
+}
+
+.sudo li:first-child {
+    background: red;
+}
+
+.sudo li:last-child {
+    background: blue;
+}
+
+.sudo li:nth-child(5) {
+    background: yellow;
+}
+
+.sudo li:nth-child(even) {
+    background: gray;
 }
