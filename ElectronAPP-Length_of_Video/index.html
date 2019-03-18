@@ -1,0 +1,36 @@
+<head>
+
+</head>
+
+<body>
+    <h1>Video Info Test</h1>
+    <form>
+        <div>
+            <label>select a video</label>
+            <br>
+            <input type="file" accept="video/*" />
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <div>
+        <h1 id="result"></h1>
+    </div>
+    <script>
+        const electron = require('electron')
+        const { ipcRenderer } = electron;
+        document.querySelector('form').addEventListener('submit', (event) => { //as soom as someone submits something, this triggers
+            event.preventDefault(); //Prevent auto submission
+            //debugger // pause exec in program to debug :)
+            const { path } = document.querySelector('input').files[0]; // Takes the path of the video and strips it off the array of data
+            console.log("HTML" + path)
+            ipcRenderer.send('video:submit', path); // sending
+
+        }) // Watching for submit event in form tags
+
+        ipcRenderer.on('duration:sent', (event, duration) => {
+            document.querySelector('#result').innerHTML = `Video is ${duration} seconds`;
+        })
+
+    </script>
+
+</body>

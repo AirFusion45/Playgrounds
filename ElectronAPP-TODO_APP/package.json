@@ -1,11 +1,10 @@
 {
-  "name": "electron-course-test",
+  "name": "electronapp-todo_app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "AirFusion45",
   "license": "MIT",
